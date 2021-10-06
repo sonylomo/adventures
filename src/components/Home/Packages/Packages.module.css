@@ -1,0 +1,25 @@
+/* Packages */
+.packages {
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.packages__subtitle {
+  margin-bottom: 4em;
+  margin-top: 2em;
+}
+
+/* PackageCard */
+.PackageCard__image {
+  padding: 10px;
+  transition: transform 0.2s; 
+  /* width: 200px;
+  height: 200px; */
+  /* margin: 0 auto; */
+}
+
+.PackageCard__image:hover {
+  transform: scale(
+    1.1
+  );
+}

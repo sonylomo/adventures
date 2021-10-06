@@ -1,10 +1,11 @@
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/General/NavBar';
 import ContactUs from './pages/ContactUs';
 import Destinations from './pages/Destinations';
 import Home from './pages/Home';
 import Tours from './pages/Tours';
+import Footer from './components/General/Footer';
 
 const AppRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Router>
           <AppRoutes />
         </Router>
+        <Footer/>
       </Box>
     </ChakraProvider>
   );

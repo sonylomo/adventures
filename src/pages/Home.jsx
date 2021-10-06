@@ -1,13 +1,19 @@
-import Caroussel from "../components/Home/Caroussel"
+import AboutUs from '../components/Home/AboutUs';
+import Caroussel from '../components/Home/Caroussel';
+import Packages from '../components/Home/Packages/Packages';
+import MailUs from '../components/Home/MailUs';
+import Services from '../components/Home/Services';
 
 const Home = () => {
-    return (
-        <div>
-            <Caroussel/>
-            <h1>You're home mofo!</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates culpa ut quis blanditiis totam odit dolores tempora labore iure, temporibus pariatur, facilis error iste voluptatum corporis. Omnis, aperiam in!</p>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Caroussel />
+      <Packages />
+      <Services />
+      <AboutUs />
+      <MailUs />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
