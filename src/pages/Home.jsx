@@ -1,13 +1,13 @@
 import AboutUs from '../components/Home/AboutUs';
-import Caroussel from '../components/Home/Caroussel';
-import Packages from '../components/Home/Packages/Packages';
 import MailUs from '../components/Home/MailUs';
+import Packages from '../components/Home/Packages/Packages';
 import Services from '../components/Home/Services';
+import Welcome from '../components/Home/Welcome';
 
 const Home = () => {
   return (
     <div>
-      <Caroussel />
+      <Welcome />
       <Packages />
       <Services />
       <AboutUs />

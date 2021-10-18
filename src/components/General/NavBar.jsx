@@ -9,6 +9,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { BsList, BsX } from 'react-icons/bs';
+import Logo  from '../../assets/Logo';
 
 const Links = ['Home', 'Destinations', 'Tours', 'Contacts'];
 
@@ -42,7 +43,9 @@ function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <Box>
+              <Logo color={useColorModeValue('gray.700', 'white')} />
+            </Box>
             <HStack
               as={'nav'}
               spacing={4}

@@ -5,7 +5,7 @@ import styles from './Packages.module.css';
 const Packages = () => {
   return (
     <div className={styles.packages}>
-      <hr />
+      {/* <hr /> */}
       <Heading as="h2">Check out our epic deals</Heading>
       <p className={styles.packages__subtitle}>
         We've got maximum luxury at affordable prices and discounts.
