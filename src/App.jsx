@@ -6,6 +6,7 @@ import Destinations from './pages/Destinations';
 import Home from './pages/Home';
 import Tours from './pages/Tours';
 import Footer from './components/General/Footer';
+import './App.css';
 
 const AppRoutes = () => {
   return (
