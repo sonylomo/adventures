@@ -9,7 +9,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 
-const Caroussel = () => {
+const Testimonial = () => {
   const arrowStyles = {
     cursor: 'pointer',
     pos: 'absolute',
@@ -140,4 +140,4 @@ const Caroussel = () => {
   );
 };
 
-export default Caroussel;
+export default Testimonial;

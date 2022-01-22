@@ -4,3 +4,18 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
 }
+
+/* PackageCard */
+.PackageCard__image {
+    padding: 10px;
+    transition: transform 0.2s; 
+    /* width: 200px;
+    height: 200px; */
+    /* margin: 0 auto; */
+  }
+  
+  .PackageCard__image:hover {
+    transform: scale(
+      1.1
+    );
+  }

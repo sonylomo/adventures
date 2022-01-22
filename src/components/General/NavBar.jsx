@@ -9,7 +9,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { BsList, BsX } from 'react-icons/bs';
-import Logo  from '../../assets/Logo';
+import Logo from '../../assets/Logo';
 
 const Links = ['Home', 'Destinations', 'Tours', 'Contacts'];
 
@@ -28,7 +28,7 @@ const NavLink = ({ children, to }) => (
   </Link>
 );
 
-function NavBar() {
+const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -67,16 +67,17 @@ function NavBar() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map(link => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link} to={link === 'Home' ? '/' : `/${link}`}>
+                  {link}
+                </NavLink>
               ))}
             </Stack>
           </Box>
         ) : null}
       </Box>
 
-      {/* <Box p={4}>Main Content Here</Box> */}
     </>
   );
-}
+};
 
 export default NavBar;

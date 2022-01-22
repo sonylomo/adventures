@@ -1,26 +1,48 @@
-import { Center, Heading, HStack, Link } from '@chakra-ui/react';
+import {
+  Box, Center,
+  Heading, Link, Stack, Text
+} from '@chakra-ui/react';
 import PackageCard from './PackageCard';
-import styles from './Packages.module.css';
 
 const Packages = () => {
   return (
-    <div className={styles.packages}>
-      {/* <hr /> */}
-      <Heading as="h2">Check out our epic deals</Heading>
-      <p className={styles.packages__subtitle}>
+    <Box pb="5%">
+      <Box pt={'5%'} pb={5}>
+        <Text
+          color="#00a7c7"
+          fontSize={'33px'}
+          style={{
+            fontFamily: 'Satisfy, cursive',
+            font: ' 400 regular',
+            lineHeight: '1.8em',
+          }}
+        >
+          Plan The
+        </Text>
+        <Heading as="h2" size="3xl">
+          Perfect Holiday
+        </Heading>
+      </Box>
+      <Center width={'50%'} m={'auto'}>
         We've got maximum luxury at affordable prices and discounts.
-      </p>
-      <HStack paddingBottom="3%">
-        <Center w="100%">
-          <PackageCard />
-          <PackageCard />
-          <PackageCard />
-        </Center>
-      </HStack>
+      </Center>
+      <Stack
+        direction={['column', 'row']}
+        paddingBottom="3%"
+        mr="5%"
+        ml="5%"
+        justifyContent={'space-around'}
+      >
+        <PackageCard />
+        <PackageCard />
+        <PackageCard />
+      </Stack>
       <Link href="/Tours" isExternal>
-        View More Deals
+        <Text fontWeight={300} color="#00a7c7">
+          View More Epic Deals
+        </Text>
       </Link>
-    </div>
+    </Box>
   );
 };
 

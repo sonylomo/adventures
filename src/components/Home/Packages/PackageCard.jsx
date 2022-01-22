@@ -1,6 +1,14 @@
-import { Badge, Box, Flex, Image, useColorModeValue } from '@chakra-ui/react';
+import {
+  Badge,
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
 //   import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
-import styles from './Packages.module.css';
 
 const data = {
   isNew: true,
@@ -10,6 +18,8 @@ const data = {
   price: 4.5,
   rating: 4.2,
   numReviews: 34,
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 };
 
 //   function Rating({ rating, numReviews }) {
@@ -42,7 +52,7 @@ const data = {
 
 function PackageCard() {
   return (
-    <Flex p={50} w="full" alignItems="center" justifyContent="space-around">
+    <Flex p={25} w="full" alignItems="center" justifyContent="space-around">
       <Box
         bg={useColorModeValue('white', 'gray.800')}
         maxW="md"
@@ -53,7 +63,6 @@ function PackageCard() {
       >
         {data.isNew && (
           <Badge
-            rounded="full"
             px="2"
             fontSize="0.8em"
             colorScheme="red"
@@ -69,25 +78,46 @@ function PackageCard() {
           src={data.imageURL}
           alt={`Picture of ${data.name}`}
           roundedTop="lg"
-          className={styles.PackageCard__image}
+          // style={{ padding: '10px', transition: "transform"}}
+          className="PackageCard__image"
         />
 
         <Box p="6">
-          <Flex mt="1" justifyContent="space-between" alignContent="center">
-            <Box
-              fontSize="2xl"
+          <Box borderBottom={'solid'} borderBottomWidth={1} pb={2}>
+            <Heading
+              fontSize="1xl"
               fontWeight="semibold"
               as="h4"
               lineHeight="tight"
-              isTruncated
             >
               {data.name}
+            </Heading>
+            <Text fontSize={16}>{data.description}</Text>
+          </Box>
+          <Flex
+            borderBottom={'solid'}
+            borderBottomWidth={1}
+            fontWeight="regular"
+            as="h5"
+            height={20}
+            pt={5}
+            justifyContent={"space-between"}
+          >
+           <Box>Date</Box>
+           <Box>Group Size</Box>
+
+          </Flex>
+          <Flex
+            fontSize="2xl"
+            color={useColorModeValue('gray.800', 'white')}
+            pt={5}
+            justifyContent={'space-between'}
+          >
+            <Box as="span" color={'gray.600'} fontSize="2xl">
+              £{data.price.toFixed(2)}
             </Box>
-            <Box fontSize="2xl" color={useColorModeValue('gray.800', 'white')}>
-              <Box as="span" color={'gray.600'} fontSize="lg">
-                £
-              </Box>
-              {data.price.toFixed(2)}
+            <Box>
+              <Button>Book Now</Button>
             </Box>
           </Flex>
 
