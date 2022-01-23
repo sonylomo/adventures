@@ -1,7 +1,7 @@
 import { Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 import Caroussel from '../components/Tours/Caroussel';
 import TourCard from '../components/Tours/TourCard';
-import SearchTour from '../components/Tours/SearchTour';
+// import SearchTour from '../components/Tours/SearchTour';
 
 const Tours = () => {
   return (
